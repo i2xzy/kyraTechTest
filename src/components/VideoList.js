@@ -43,19 +43,14 @@ const Title = styled.p`
 
 export default ({ videos }) => (
   <List>
-    {videos.map((video, index) => (
+    {videos.map(({ snippet: video }, index) => (
       <Link
         key={index}
-        href={`https://www.youtube.com/watch?v=${
-          video.snippet.resourceId.videoId
-        }`}
+        href={`https://www.youtube.com/watch?v=${video.resourceId.videoId}`}
       >
         <ListItem>
-          <Thumbnail
-            src={video.snippet.thumbnails.maxres.url}
-            alt="thumbnail"
-          />
-          <Title title={video.snippet.title}>{video.snippet.title}</Title>
+          <Thumbnail src={video.thumbnails.maxres.url} alt="thumbnail" />
+          <Title title={video.title}>{video.title}</Title>
         </ListItem>
       </Link>
     ))}
