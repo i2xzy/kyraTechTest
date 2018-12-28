@@ -1,5 +1,7 @@
 import { client } from 'gapi-client';
 
+console.log(process.env.REACT_APP_API_KEY);
+
 const apiKey = process.env.REACT_APP_API_KEY || '';
 
 export default () => {
