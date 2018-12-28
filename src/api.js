@@ -1,7 +1,9 @@
 import { client } from 'gapi-client';
 
+const apiKey = process.env.REACT_APP_API_KEY || process.env.API_KEY;
+
 export default () => {
-  client.init({ apiKey: process.env.REACT_APP_API_KEY });
+  client.init({ apiKey });
   return client
     .load('youtube', 'v3')
     .then(() =>
