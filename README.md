@@ -26,6 +26,7 @@ Please submit your task either as a Github repository, or zipped with necessary 
 
 - React
 - create-react-app
+- gapi-client
 - Github
 - Netlify
 - _Google Charts_
